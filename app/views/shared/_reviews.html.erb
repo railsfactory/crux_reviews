@@ -1,0 +1,10 @@
+<div id="reviews">
+  <%= render :partial => 'shared/rating', :locals => {:product => @product, :review => 0} %>
+	<%product_reviews=find_domain_product_review(find_domain_preference("Reviews configuration"),@product.reviews)%>
+  <% for review in product_reviews%>
+    <%= render :partial => 'shared/review', :locals => {:review => review} %>
+  <% end %>
+
+  <%= link_to t('write_your_own_review'), new_product_review_path(@product), :class => "button" %>
+</div>
+

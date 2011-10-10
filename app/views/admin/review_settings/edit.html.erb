@@ -1,0 +1,19 @@
+<%= render  'admin/shared/configuration_menu' %>
+
+<h1><%= t("reviews.review_settings") %></h1>
+<% form_tag(admin_review_settings_path, :method => :put) do -%>
+  <p>
+<%include=@preferences && @preferences.blank? ? Spree::Reviews::Config[:include_unapproved_reviews] : @preferences.select{|x|x.name=="include_unapproved_reviews"}.map(&:value)[0]%>
+<%preview=@preferences && @preferences.blank? ? Spree::Reviews::Config[:preview_size] : @preferences.select{|x|x.name=="preview_size"}.map(&:value)%>
+    <label><%= t("reviews.include_unapproved") %>:</label>
+    <%= check_box_tag('preferences[include_unapproved_reviews]',"1", include) %>
+  </p>
+  <p>
+    <label><%= t('reviews.preview_size') %>:</label>
+    <%= text_field_tag('preferences[preview_size]',preview, :size => 3) %>
+  </p> 
+  <p class="form-buttons">
+    <%= button t('update') %>
+    <%= t("or") %> <%= link_to t("cancel"), admin_review_settings_url %>
+  </p>
+ <% end -%>

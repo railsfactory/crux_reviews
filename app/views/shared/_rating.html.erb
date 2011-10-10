@@ -1,0 +1,17 @@
+<% content_for :head do %>
+<%= stylesheet_link_tag 'reviews.css' %>
+<%= javascript_include_tag "jquery.rating.js" %>
+<%= javascript_tag "$(document).ready(function(){$('.stars').rating({required:true});});"%>
+<% end %>
+<% stars = product.get_stars %>
+<div class="header clear" >
+  <h3><%= t('average_customer_rating') %>: </h3>
+  <span title="<%= txt_stars(stars[0]) %>">
+    <%= render :partial => "reviews/stars", :locals => {:stars => stars[0]} %>
+  </span> &nbsp;
+  <br/>
+  (<%= t('based_upon') %> <%= t('review', :count => stars[1]) %>)
+  <br/>
+  <br/>
+</div>
+

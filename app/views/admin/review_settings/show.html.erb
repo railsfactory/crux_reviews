@@ -1,0 +1,18 @@
+<%= render 'admin/shared/configuration_menu' %>
+<h1><%= t("reviews.review_settings") %></h1>
+<%include=@preferences && @preferences.blank? ?  Spree::Reviews::Config[:include_unapproved_reviews] : @preferences.select{|x|x.name=="include_unapproved_reviews"}.map(&:value)[0]%>
+<%preview=@preferences && @preferences.blank? ?  Spree::Reviews::Config[:preview_size] : @preferences.select{|x|x.name=="preview_size"}.map(&:value)%>
+<table>
+  <tr>
+  <th scope="row"><%= t("reviews.include_unapproved") %>:</th>
+    <td><%=include%></td>
+  </tr>
+  <tr>
+    <th scope="row"><%= t("reviews.preview_size") %>:</th>
+    <td> <%=preview%></td>
+  </tr>
+</table>
+<p>
+  <%= link_to_with_icon('edit', t("edit"), edit_admin_review_settings_path) %>
+</p>
+

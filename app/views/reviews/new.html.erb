@@ -1,0 +1,11 @@
+<% content_for :head do %>
+<%= stylesheet_link_tag 'reviews.css' %>
+<%= javascript_include_tag "jquery.rating.js" %>
+<%= javascript_tag "$(document).ready(function(){$('.stars').rating({required:true});});" %>
+<% end %>
+<h2> <%= I18n.t('leave_us_a_review_for') + ' "' + @product.name + '"' %> </h2>
+
+<%= render 'form', { :review => @review, :product => @product } %>
+
+<%= render :partial => "fine_print" %>
+
