@@ -44,10 +44,3 @@ Store admin can edit or approve or delete the reviews by using the review manage
 Config your review settings
 
 
-Example
-=======
-
-Example goes here.
-
-
-Copyright (c) 2011 [name of extension creator], released under the New BSD License
