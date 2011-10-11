@@ -6,6 +6,7 @@ Introduction goes here.
 This enables you to review/ratings the product.
 
 Installation
+===========
 
 Start by adding the gem to your existing Rails 3.x application's Gemfile
 
@@ -32,6 +33,7 @@ Now you should be able to boot up your server with:
 rails s  
 
 Usage
+===========
 
 Use 'write your review' button on product page to submit your review
 
