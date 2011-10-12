@@ -16,7 +16,7 @@
     <% for review in reviews[1] %>
     <tr>
       <td>
-        <%= l review.created_at, :format => :long %>
+        <%=review.created_at %>
       </td>
       <td>
         <%= review.name %><%= t('from') %> <%= review.location %>
