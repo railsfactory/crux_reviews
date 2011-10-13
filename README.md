@@ -1,7 +1,7 @@
 ﻿CruxReviews
 ===========
 
-CruxReviews is an extension for Spree Commerce. It is mandatory that Spree has to be installed in the system
+CruxReviews is an extension for Spree Commerce. It is mandatory that Spree and Crux has to be installed in the system
 to add this extension. CruxReviews enables display of user reviews and user ratings for individual products. 
 The reviews get placed on individual product pages itself thereby helps drive more SEO tags.
 
