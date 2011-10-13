@@ -1,12 +1,13 @@
 ﻿CruxReviews
 ===========
 
-Introduction goes here.
-
-This enables you to review/ratings the product.
+CruxReviews is an extension for Spree Commerce. It is mandatory that Spree has to be installed in the system
+to add this extension. CruxReviews enables display of user reviews and user ratings for individual products. 
+The reviews get placed on individual product pages itself thereby helps drive more SEO tags.
 
 Installation
 ===========
+It is mandatory that Spree has to be installed prior to the inclusion of the Extension.
 
 Start by adding the gem to your existing Rails 3.x application's Gemfile
 
